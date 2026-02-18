@@ -1,0 +1,40 @@
+# 左側の表示（timeとcmd_durationを除外）
+format = '$directory$git_branch$git_status$fill$nodejs$line_break$character'
+
+# 実行時間と時刻を右側に表示
+right_format = '$cmd_duration$time'
+
+# OS表示
+[os]
+disabled = false
+
+[os.symbols]
+Macos = ' '
+
+# ディレクトリ
+[directory]
+home_symbol = ' ~'
+
+[cmd_duration]
+min_time = 0
+show_milliseconds = true
+style = 'white'
+format = ' [$duration]($style) '
+
+[time]
+disabled = false
+time_format = '%T'
+style = 'white'
+format = ' [$time]($style) '
+
+[fill]
+symbol = ' '
+
+[git_branch]
+format = '[\[]($style)[$symbol$branch(:$remote_branch)]($style)[\]]($style) '
+
+[nodejs]
+format = '[$symbol($version )]($style)'
+
+[gcloud]
+disabled = true
